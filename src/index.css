@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #050605;
+  --color-canvas-secondary: #0A0D0A;
+  --color-panel-dark: #111411;
+  --color-panel-elevated: #191D19;
+  --color-accent-lime: #C5FF62;
+  --color-accent-energy: #00FF78;
+  --color-accent-emerald: #00A85A;
+  --color-text-primary: #F5F7F2;
+  --color-text-secondary: #A1A69E;
+  --color-border-subtle: #30372F;
+}
+
+@layer base {
+  html {
+    background-color: #050605;
+    color: #F5F7F2;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #050605;
+    color: #F5F7F2;
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 2px solid #C5FF62;
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.scrollbar-trck {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 255, 156, 0.25) transparent;
+}
+
+.scrollbar-trck::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar-trck::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-trck::-webkit-scrollbar-thumb {
+  background: rgba(107, 255, 156, 0.22);
+  border-radius: 9999px;
+}
+
+.scrollbar-trck::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 255, 156, 0.45);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

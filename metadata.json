@@ -1,0 +1,6 @@
+{
+  "name": "TRCK MAIN",
+  "description": "Take Control. Build Your Future. One connected workspace to organize your life, manage your priorities, develop your skills, and turn ambitions into meaningful progress.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
